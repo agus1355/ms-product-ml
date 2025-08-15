@@ -1,0 +1,160 @@
+[
+  {
+    "id": 1,
+    "name": "Bicicleta Montaña XT500",
+    "description": "Bicicleta de montaña con suspensión completa y frenos de disco.",
+    "condition": "new",
+    "isReturnable": true,
+    "creationDate": "2025-08-14T00:00:00.000Z",
+    "warranty": { "duration": 12, "unit": "months" },
+    "status": "active",
+    "reviewScore": 4.5,
+    "specificationGroups": [
+      {
+        "id": 1,
+        "title": "General",
+        "specificationType": "TABLE",
+        "items": [
+          { "id": 1, "title": "Marca", "value": "XT" },
+          { "id": 2, "title": "Rodado", "value": "29" }
+        ]
+      },
+      {
+        "id": 2,
+        "title": "Rueda",
+        "specificationType": "ICON_LIST",
+        "items": [
+          { "id": 3, "title": "Tipo", "value": "Tubeless", "icon": "wheel-icon.png" }
+        ]
+      }
+    ],
+    "photos": [
+      { "id": 1, "url": "https://example.com/photo1.jpg", "order": 1 },
+      { "id": 2, "url": "https://example.com/photo2.jpg", "order": 2 }
+    ],
+    "categories": [
+      { "category": { "id": 1, "name": "Bicicletas", "parentId": 0 }, "ranking": 1, "isMostSpecific": true },
+      { "category": { "id": 0, "name": "Deportes", "parentId": null }, "ranking": 5, "isMostSpecific": false }
+    ],
+    "seller": { "id": 1, "name": "Vendedor A", "score": 4.8, "isVerified": true },
+    "price": 1200
+  },
+  {
+    "id": 2,
+    "name": "Smartphone Galaxy S25",
+    "description": "Teléfono con pantalla AMOLED y 256GB de almacenamiento.",
+    "condition": "new",
+    "isReturnable": true,
+    "creationDate": "2025-08-10T00:00:00.000Z",
+    "warranty": { "duration": 24, "unit": "months" },
+    "status": "active",
+    "reviewScore": 4.7,
+    "specificationGroups": [
+      {
+        "id": 3,
+        "title": "Pantalla",
+        "specificationType": "TABLE",
+        "items": [
+          { "id": 4, "title": "Tamaño", "value": "6.7" },
+          { "id": 5, "title": "Tipo", "value": "AMOLED" }
+        ]
+      }
+    ],
+    "photos": [{ "id": 4, "url": "https://example.com/phone1.jpg", "order": 1 }],
+    "categories": [
+      { "category": { "id": 2, "name": "Smartphones", "parentId": 3 }, "ranking": 3, "isMostSpecific": true },
+      { "category": { "id": 3, "name": "Electrónica", "parentId": null }, "ranking": 10, "isMostSpecific": false }
+    ],
+    "seller": { "id": 2, "name": "TechStore", "score": 4.9, "isVerified": true },
+    "price": 999
+  },
+  {
+    "id": 3,
+    "name": "Auriculares Inalámbricos X100",
+    "description": "Auriculares Bluetooth con cancelación de ruido y 30h de batería.",
+    "condition": "new",
+    "isReturnable": true,
+    "creationDate": "2025-08-12T00:00:00.000Z",
+    "warranty": { "duration": 12, "unit": "months" },
+    "status": "active",
+    "reviewScore": 4.2,
+    "specificationGroups": [
+      {
+        "id": 4,
+        "title": "Características",
+        "specificationType": "LIST",
+        "items": [
+          { "id": 6, "value": "Bluetooth 5.0" },
+          { "id": 7, "value": "Cancelación de ruido" }
+        ]
+      }
+    ],
+    "photos": [{ "id": 5, "url": "https://example.com/headphones1.jpg", "order": 1 }],
+    "categories": [
+      { "category": { "id": 4, "name": "Auriculares", "parentId": 3 }, "ranking": 5, "isMostSpecific": true },
+      { "category": { "id": 3, "name": "Electrónica", "parentId": null }, "ranking": 20, "isMostSpecific": false }
+    ],
+    "seller": { "id": 3, "name": "AudioWorld", "score": 4.5, "isVerified": false },
+    "price": 150
+  },
+  {
+    "id": 4,
+    "name": "Notebook ProBook 450",
+    "description": "Portátil con i7, 16GB RAM y SSD de 512GB.",
+    "condition": "new",
+    "isReturnable": true,
+    "creationDate": "2025-08-05T00:00:00.000Z",
+    "warranty": { "duration": 24, "unit": "months" },
+    "status": "active",
+    "reviewScore": 4.6,
+    "specificationGroups": [
+      {
+        "id": 5,
+        "title": "Hardware",
+        "specificationType": "TABLE",
+        "items": [
+          { "id": 8, "title": "CPU", "value": "Intel i7" },
+          { "id": 9, "title": "RAM", "value": "16GB" },
+          { "id": 10, "title": "SSD", "value": "512GB" }
+        ]
+      }
+    ],
+    "photos": [{ "id": 6, "url": "https://example.com/laptop1.jpg", "order": 1 }],
+    "categories": [
+      { "category": { "id": 5, "name": "Notebooks", "parentId": 6 }, "ranking": 2, "isMostSpecific": true },
+      { "category": { "id": 6, "name": "Computación", "parentId": null }, "ranking": 8, "isMostSpecific": false }
+    ],
+    "seller": { "id": 4, "name": "CompuStore", "score": 4.7, "isVerified": true },
+    "price": 1300
+  },
+  {
+    "id": 5,
+    "name": "Smart TV 55 UltraHD",
+    "description": "Televisor 4K con HDR y conexión a apps de streaming.",
+    "condition": "new",
+    "isReturnable": true,
+    "creationDate": "2025-08-08T00:00:00.000Z",
+    "warranty": { "duration": 36, "unit": "months" },
+    "status": "active",
+    "reviewScore": 4.8,
+    "specificationGroups": [
+      {
+        "id": 6,
+        "title": "Pantalla",
+        "specificationType": "TABLE",
+        "items": [
+          { "id": 11, "title": "Tamaño", "value": "55" },
+          { "id": 12, "title": "Resolución", "value": "4K" },
+          { "id": 13, "title": "HDR", "value": "Sí" }
+        ]
+      }
+    ],
+    "photos": [{ "id": 7, "url": "https://example.com/tv1.jpg", "order": 1 }],
+    "categories": [
+      { "category": { "id": 7, "name": "Televisores", "parentId": 3 }, "ranking": 1, "isMostSpecific": true },
+      { "category": { "id": 3, "name": "Electrónica", "parentId": null }, "ranking": 6, "isMostSpecific": false }
+    ],
+    "seller": { "id": 5, "name": "TVStore", "score": 4.9, "isVerified": true },
+    "price": 700
+  }
+]

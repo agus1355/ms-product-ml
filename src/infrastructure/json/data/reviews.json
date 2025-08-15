@@ -1,0 +1,34 @@
+[
+  {
+    "id": 1,
+    "productId": 1,
+    "score": 5,
+    "description": "Excelente bicicleta, muy resistente.",
+    "date": "2025-08-01T00:00:00.000Z",
+    "photos": [{ "id": 3, "url": "https://example.com/review1.jpg" }]
+  },
+  {
+    "id": 2,
+    "productId": 2,
+    "score": 5,
+    "description": "Pantalla espectacular y batería duradera.",
+    "date": "2025-08-11T00:00:00.000Z",
+    "photos": []
+  },
+  {
+    "id": 3,
+    "productId": 3,
+    "score": 4,
+    "description": "Cómodos y buena calidad de sonido.",
+    "date": "2025-08-13T00:00:00.000Z",
+    "photos": []
+  },
+  {
+    "id": 4,
+    "productId": 4,
+    "score": 5,
+    "description": "Rendimiento excelente para trabajo y gaming.",
+    "date": "2025-08-06T00:00:00.000Z",
+    "photos": []
+  }
+]

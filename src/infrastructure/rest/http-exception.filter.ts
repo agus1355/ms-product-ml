@@ -5,31 +5,31 @@ import {
   HttpException,
   HttpStatus,
 } from '@nestjs/common';
+import { getHttpStatusForDomainException } from './domain-exception-mapper';
+import { DomainException } from 'src/domain/exceptions/DomainException';
 
-@Catch(HttpException)
+@Catch()
 export class HttpExceptionFilter implements ExceptionFilter<HttpException> {
   catch(exception: HttpException, host: ArgumentsHost) {
     const ctx = host.switchToHttp();
     const response = ctx.getResponse();
     const request = ctx.getRequest();
-    const statusCode = exception.getStatus();
+    let statusCode: number;
 
-    if (statusCode !== HttpStatus.UNPROCESSABLE_ENTITY)
-      response.status(statusCode).json({
-        statusCode,
-        message: exception.message,
-        timestamp: new Date().toISOString(),
-        path: request.url,
-      });
-
-    const exceptionResponse: any = exception.getResponse();
-    console.log(exceptionResponse);
+    if(exception instanceof DomainException){
+      statusCode = getHttpStatusForDomainException(exception);
+    }
+    else if (exception instanceof HttpException) {
+      statusCode = exception.getStatus();
+    }
+    else{
+      statusCode = HttpStatus.INTERNAL_SERVER_ERROR;
+    }
 
     response.status(statusCode).json({
       statusCode,
-      error: exceptionResponse.message,
+      message: exception.message,
       timestamp: new Date().toISOString(),
-      path: request.url,
     });
   }
 }
