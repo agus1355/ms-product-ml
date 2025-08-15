@@ -2,7 +2,7 @@ version: '3.8'
 
 services:
   app:
-    container_name: nestjs-app
+    container_name: ms-product-ml-nestjs
     build:
       context: .
       dockerfile: Dockerfile
@@ -24,7 +24,7 @@ services:
 
   mysql:
     image: mysql:8.0
-    container_name: mysql-db
+    container_name: ms-product-ml-db
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: ${DB_PASSWORD}
@@ -38,7 +38,7 @@ services:
 
   rabbitmq:
       image: rabbitmq:3-management
-      container_name: rabbitmq
+      container_name: ms-product-ml-rabbitmq
       ports:
         - "${RABBITMQ_PORT}:${RABBITMQ_PORT}"
         - "${RABBITMQ_ADMIN_PORT}:${RABBITMQ_ADMIN_PORT}"

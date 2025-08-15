@@ -5,11 +5,15 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { RabbitService } from './domain/services/rabbit.service';
 import { AppDataSource } from './infrastructure/database/data-source';
 import { SeedModule } from './infrastructure/inversion-of-control/seed.module';
+import { ProductModule } from './infrastructure/inversion-of-control/product.module';
+import { ReviewModule } from './infrastructure/inversion-of-control/review.module';
 
 @Module({
   imports: [
     TypeOrmModule.forRoot(AppDataSource.options),
-    SeedModule
+    SeedModule,
+    ProductModule,
+    ReviewModule
   ],
   controllers: [AppController],
   providers: [AppService, RabbitService],
