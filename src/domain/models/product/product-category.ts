@@ -5,5 +5,6 @@ export class ProductCategory {
     public readonly id: number,
     public readonly category: Category,
     public readonly ranking: number,
+    public readonly isMostSpecific: boolean
   ) {}
 }

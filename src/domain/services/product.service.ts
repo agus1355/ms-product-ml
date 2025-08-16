@@ -3,6 +3,8 @@ import { TOKENS } from 'src/application/tokens';
 import { Product } from '../models/product/product';
 import { IProductRepository } from 'src/application/ports/product.repository.interface';
 import { ProductNotFoundException } from '../exceptions/ProductNotFoundException';
+import { Category } from '../models/category';
+import { ProductCategory } from '../models/product/product-category';
 
 @Injectable()
 export class ProductService {
@@ -17,5 +19,13 @@ export class ProductService {
             throw new ProductNotFoundException(productId);
         }
         return product;
+    }
+
+    async getRelatedProductsByCategoriesAndLimit(productCategories: ProductCategory[], productIdToExclude: number, limit: number): Promise<Product[]> {
+        const categoryIds: number[] = [];
+        for (const productCategory of productCategories) {
+            categoryIds.push(productCategory.category.id);
+        }
+        return this.productRepository.findProductsByCategoriesIdAndLimit(categoryIds, productIdToExclude, limit);
     }
 }

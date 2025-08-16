@@ -4,8 +4,10 @@ import { Review } from "../review/review";
 import { Seller } from "../seller";
 import { SpecificationGroup } from "../specifications/specification-group";
 import { Warranty } from "./warranty";
+import { Offer } from "../offer";
 
 export class Product {
+  public readonly bestOffers: Offer[] = [];
   constructor(
     public readonly id: number,
     public readonly name: string,
@@ -20,6 +22,8 @@ export class Product {
     public readonly photos: ProductPhoto[],
     public readonly reviews: Review[] = [],
     public readonly categories: ProductCategory[] = [],
-    public readonly seller: Seller,
-  ) {}
+    bestOffers?: Offer[]
+  ) {
+    this.bestOffers = bestOffers || [];
+  }
 }
