@@ -9,6 +9,7 @@ services:
     command: npm run start:dev
     ports:
       - "3000:3000"
+      - "9229:9229"
     volumes:
       - .:/usr/src/app
       - /usr/src/app/node_modules
@@ -18,33 +19,3 @@ services:
       - DB_USERNAME=${DB_USERNAME}
       - DB_PASSWORD=${DB_PASSWORD}
       - DB_DATABASE=${DB_DATABASE}
-    depends_on:
-      - mysql
-      - rabbitmq
-
-  mysql:
-    image: mysql:8.0
-    container_name: ms-product-ml-db
-    restart: always
-    environment:
-      MYSQL_ROOT_PASSWORD: ${DB_PASSWORD}
-      MYSQL_DATABASE: ${DB_DATABASE}
-      #MYSQL_USER: ${DB_USERNAME}
-      MYSQL_PASSWORD: ${DB_PASSWORD}
-    ports:
-      - "3306:3306"
-    volumes:
-      - mysql-data:/var/lib/mysql
-
-  rabbitmq:
-      image: rabbitmq:3-management
-      container_name: ms-product-ml-rabbitmq
-      ports:
-        - "${RABBITMQ_PORT}:${RABBITMQ_PORT}"
-        - "${RABBITMQ_ADMIN_PORT}:${RABBITMQ_ADMIN_PORT}"
-      environment:
-        RABBITMQ_DEFAULT_USER: ${RABBITMQ_USER}
-        RABBITMQ_DEFAULT_PASS: ${RABBITMQ_PASSWORD}
-
-volumes:
-  mysql-data:

@@ -1,0 +1,191 @@
+[
+  {
+    "productId": 1,
+    "basePrice": { "currency": "ARS", "amount": 1200 },
+    "priceWithoutVAT": { "currency": "ARS", "amount": 1000 },
+    "installmentPlan": {
+      "numberOfInstallments": 12,
+      "installmentAmount": { "currency": "ARS", "amount": 100 },
+      "interestRate": 0.05
+    },
+    "shipments": [
+      { "type": "Standard", "deliveryTime": "3-5 days", "cost": { "currency": "ARS", "amount": 50 }, "isFreeForBuyer": false},
+      { "type": "Express", "deliveryTime": "1-2 days", "cost": { "currency": "ARS", "amount": 100 }, "isFreeForBuyer": true }
+    ],
+    "date": "2025-08-15T00:00:00.000Z",
+    "status": "ENABLE",
+    "availableStock": 5,
+    "offerType": "BEST_PRICE",
+    "seller": { "id": 1, "name": "Vendedor A", "score": 4.8, "isVerified": true }
+  },
+  {
+    "productId": 1,
+    "basePrice": { "currency": "ARS", "amount": 1250 },
+    "priceWithoutVAT": { "currency": "ARS", "amount": 1040 },
+    "installmentPlan": null,
+    "shipments": [
+      { "type": "Standard", "deliveryTime": "4-6 days", "cost": { "currency": "ARS", "amount": 60 }, "isFreeForBuyer": true }
+    ],
+    "date": "2025-08-16T00:00:00.000Z",
+    "status": "ENABLE",
+    "availableStock": 2,
+    "offerType": null,
+    "seller": { "id": 2, "name": "Vendedor B", "score": 4.6, "isVerified": false }
+  },
+  {
+    "productId": 2,
+    "basePrice": { "currency": "ARS", "amount": 999 },
+    "priceWithoutVAT": { "currency": "ARS", "amount": 900 },
+    "installmentPlan": {
+      "numberOfInstallments": 6,
+      "installmentAmount": { "currency": "ARS", "amount": 170 },
+      "interestRate": 0.03
+    },
+    "shipments": [
+      { "type": "Standard", "deliveryTime": "3-5 days", "cost": { "currency": "ARS", "amount": 40 }, "isFreeForBuyer": false },
+      { "type": "Express", "deliveryTime": "1-2 days", "cost": { "currency": "ARS", "amount": 90 }, "isFreeForBuyer": false}
+    ],
+    "date": "2025-08-14T00:00:00.000Z",
+    "status": "DISABLE",
+    "availableStock": 0,
+    "offerType": "BEST_INSTALLMENTS",
+    "seller": { "id": 3, "name": "TechStore", "score": 4.9, "isVerified": true }
+  },
+  {
+    "productId": 3,
+    "basePrice": { "currency": "ARS", "amount": 150 },
+    "priceWithoutVAT": { "currency": "ARS", "amount": 135 },
+    "installmentPlan": null,
+    "shipments": [
+      { "type": "Standard", "deliveryTime": "3-5 days", "cost": { "currency": "ARS", "amount": 20 }, "isFreeForBuyer": true}
+    ],
+    "date": "2025-08-15T00:00:00.000Z",
+    "status": "ENABLE",
+    "availableStock": 10,
+    "offerType": null,
+    "seller": { "id": 4, "name": "AudioWorld", "score": 4.5, "isVerified": false }
+  },
+  {
+    "productId": 4,
+    "basePrice": { "currency": "ARS", "amount": 1300 },
+    "priceWithoutVAT": { "currency": "ARS", "amount": 1200 },
+    "installmentPlan": {
+      "numberOfInstallments": 10,
+      "installmentAmount": { "currency": "ARS", "amount": 130 },
+      "interestRate": 0.02
+    },
+    "shipments": [
+      { "type": "Standard", "deliveryTime": "5-7 days", "cost": { "currency": "ARS", "amount": 60 }, "isFreeForBuyer": true },
+      { "type": "Express", "deliveryTime": "2-3 days", "cost": { "currency": "ARS", "amount": 120 }, "isFreeForBuyer": false }
+    ],
+    "date": "2025-08-17T00:00:00.000Z",
+    "status": "ENABLE",
+    "availableStock": 3,
+    "offerType": "BEST_SHIPMENT",
+    "seller": { "id": 5, "name": "CompuStore", "score": 4.7, "isVerified": true }
+  },
+    {
+    "productId": 5,
+    "basePrice": { "currency": "ARS", "amount": 1400 },
+    "priceWithoutVAT": { "currency": "ARS", "amount": 1300 },
+    "installmentPlan": {
+      "numberOfInstallments": 10,
+      "installmentAmount": { "currency": "ARS", "amount": 140 },
+      "interestRate": 0.02
+    },
+    "shipments": [
+      { "type": "Standard", "deliveryTime": "5-7 days", "cost": { "currency": "ARS", "amount": 60 }, "isFreeForBuyer": true },
+      { "type": "Express", "deliveryTime": "2-3 days", "cost": { "currency": "ARS", "amount": 120 }, "isFreeForBuyer": false }
+    ],
+    "date": "2025-08-17T00:00:00.000Z",
+    "status": "ENABLE",
+    "availableStock": 3,
+    "offerType": "BEST_SHIPMENT",
+    "seller": { "id": 5, "name": "CompuStore", "score": 4.7, "isVerified": true }
+  },
+  {
+    "productId": 6,
+    "basePrice": { "currency": "ARS", "amount": 24999 },
+    "priceWithoutVAT": { "currency": "ARS", "amount": 20660 },
+    "installmentPlan": {
+      "numberOfInstallments": 6,
+      "installmentAmount": { "currency": "ARS", "amount": 4166.5 },
+      "interestRate": 0.04
+    },
+    "shipments": [
+      { "type": "Standard", "deliveryTime": "3-5 days", "cost": { "currency": "ARS", "amount": 1500 }, "isFreeForBuyer": false },
+      { "type": "Express", "deliveryTime": "1-2 days", "cost": { "currency": "ARS", "amount": 3000 }, "isFreeForBuyer": false }
+    ],
+    "date": "2025-08-10T10:00:00.000Z",
+    "status": "ENABLE",
+    "availableStock": 15,
+    "offerType": "BEST_INSTALLMENTS",
+    "seller": { "id": 201, "name": "SmartTech Store", "score": 4.9, "isVerified": true }
+  },
+  {
+    "productId": 7,
+    "basePrice": { "currency": "ARS", "amount": 8999 },
+    "priceWithoutVAT": { "currency": "ARS", "amount": 7446 },
+    "installmentPlan": null,
+    "shipments": [
+      { "type": "Standard", "deliveryTime": "5-7 days", "cost": { "currency": "ARS", "amount": 900 }, "isFreeForBuyer": false }
+    ],
+    "date": "2025-08-12T12:30:00.000Z",
+    "status": "ENABLE",
+    "availableStock": 40,
+    "offerType": null,
+    "seller": { "id": 202, "name": "HomeEssentials", "score": 4.3, "isVerified": false }
+  },
+  {
+    "productId": 8,
+    "basePrice": { "currency": "ARS", "amount": 135000 },
+    "priceWithoutVAT": { "currency": "ARS", "amount": 111570 },
+    "installmentPlan": {
+      "numberOfInstallments": 12,
+      "installmentAmount": { "currency": "ARS", "amount": 11250 },
+      "interestRate": 0.05
+    },
+    "shipments": [
+      { "type": "Standard", "deliveryTime": "4-6 days", "cost": { "currency": "ARS", "amount": 2500 }, "isFreeForBuyer": true },
+      { "type": "Express", "deliveryTime": "1-2 days", "cost": { "currency": "ARS", "amount": 5000 }, "isFreeForBuyer": false }
+    ],
+    "date": "2025-08-14T15:45:00.000Z",
+    "status": "ENABLE",
+    "availableStock": 5,
+    "offerType": "BEST_PRICE",
+    "seller": { "id": 203, "name": "TechWorld", "score": 4.8, "isVerified": true }
+  },
+  {
+    "productId": 9,
+    "basePrice": { "currency": "ARS", "amount": 15999 },
+    "priceWithoutVAT": { "currency": "ARS", "amount": 13222 },
+    "installmentPlan": null,
+    "shipments": [
+      { "type": "Standard", "deliveryTime": "2-4 days", "cost": { "currency": "ARS", "amount": 800 }, "isFreeForBuyer": true }
+    ],
+    "date": "2025-08-13T09:20:00.000Z",
+    "status": "ENABLE",
+    "availableStock": 20,
+    "offerType": null,
+    "seller": { "id": 204, "name": "KitchenPro", "score": 4.4, "isVerified": false }
+  },
+  {
+    "productId": 10,
+    "basePrice": { "currency": "ARS", "amount": 62000 },
+    "priceWithoutVAT": { "currency": "ARS", "amount": 51240 },
+    "installmentPlan": {
+      "numberOfInstallments": 6,
+      "installmentAmount": { "currency": "ARS", "amount": 10333.33 },
+      "interestRate": 0.02
+    },
+    "shipments": [
+      { "type": "Standard", "deliveryTime": "3-5 days", "cost": { "currency": "ARS", "amount": 1800 }, "isFreeForBuyer": true },
+      { "type": "Express", "deliveryTime": "1-2 days", "cost": { "currency": "ARS", "amount": 3500 }, "isFreeForBuyer": false }
+    ],
+    "date": "2025-08-15T14:00:00.000Z",
+    "status": "ENABLE",
+    "availableStock": 8,
+    "offerType": "BEST_SHIPMENT",
+    "seller": { "id": 205, "name": "OutdoorKing", "score": 4.6, "isVerified": true }
+  } 
+]

@@ -35,9 +35,7 @@
     "categories": [
       { "category": { "id": 1, "name": "Bicicletas", "parentId": 0 }, "ranking": 1, "isMostSpecific": true },
       { "category": { "id": 0, "name": "Deportes", "parentId": null }, "ranking": 5, "isMostSpecific": false }
-    ],
-    "seller": { "id": 1, "name": "Vendedor A", "score": 4.8, "isVerified": true },
-    "price": 1200
+    ]
   },
   {
     "id": 2,
@@ -64,9 +62,7 @@
     "categories": [
       { "category": { "id": 2, "name": "Smartphones", "parentId": 3 }, "ranking": 3, "isMostSpecific": true },
       { "category": { "id": 3, "name": "Electrónica", "parentId": null }, "ranking": 10, "isMostSpecific": false }
-    ],
-    "seller": { "id": 2, "name": "TechStore", "score": 4.9, "isVerified": true },
-    "price": 999
+    ]
   },
   {
     "id": 3,
@@ -93,9 +89,7 @@
     "categories": [
       { "category": { "id": 4, "name": "Auriculares", "parentId": 3 }, "ranking": 5, "isMostSpecific": true },
       { "category": { "id": 3, "name": "Electrónica", "parentId": null }, "ranking": 20, "isMostSpecific": false }
-    ],
-    "seller": { "id": 3, "name": "AudioWorld", "score": 4.5, "isVerified": false },
-    "price": 150
+    ]
   },
   {
     "id": 4,
@@ -123,9 +117,7 @@
     "categories": [
       { "category": { "id": 5, "name": "Notebooks", "parentId": 6 }, "ranking": 2, "isMostSpecific": true },
       { "category": { "id": 6, "name": "Computación", "parentId": null }, "ranking": 8, "isMostSpecific": false }
-    ],
-    "seller": { "id": 4, "name": "CompuStore", "score": 4.7, "isVerified": true },
-    "price": 1300
+    ]
   },
   {
     "id": 5,
@@ -153,8 +145,153 @@
     "categories": [
       { "category": { "id": 7, "name": "Televisores", "parentId": 3 }, "ranking": 1, "isMostSpecific": true },
       { "category": { "id": 3, "name": "Electrónica", "parentId": null }, "ranking": 6, "isMostSpecific": false }
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Bicicleta de Ruta SpeedRacer 3000",
+    "description": "Bicicleta de ruta ultraligera con cuadro de carbono.",
+    "condition": "new",
+    "isReturnable": true,
+    "creationDate": "2025-08-15T00:00:00.000Z",
+    "warranty": { "duration": 12, "unit": "months" },
+    "status": "active",
+    "reviewScore": 4.4,
+    "specificationGroups": [
+      {
+        "id": 7,
+        "title": "General",
+        "specificationType": "TABLE",
+        "items": [
+          { "id": 14, "title": "Marca", "value": "SpeedRacer" },
+          { "id": 15, "title": "Rodado", "value": "28" }
+        ]
+      }
     ],
-    "seller": { "id": 5, "name": "TVStore", "score": 4.9, "isVerified": true },
-    "price": 700
+    "photos": [
+      { "id": 8, "url": "https://example.com/bike2.jpg", "order": 1 }
+    ],
+    "categories": [
+      { "category": { "id": 1, "name": "Bicicletas", "parentId": 0 }, "ranking": 1, "isMostSpecific": true },
+      { "category": { "id": 0, "name": "Deportes", "parentId": null }, "ranking": 5, "isMostSpecific": false }
+    ]
+  },
+  {
+    "id": 7,
+    "name": "Smartphone Pixel Ultra",
+    "description": "Teléfono con cámara avanzada y carga ultrarrápida.",
+    "condition": "new",
+    "isReturnable": true,
+    "creationDate": "2025-08-15T00:00:00.000Z",
+    "warranty": { "duration": 24, "unit": "months" },
+    "status": "active",
+    "reviewScore": 4.9,
+    "specificationGroups": [
+      {
+        "id": 8,
+        "title": "Pantalla",
+        "specificationType": "TABLE",
+        "items": [
+          { "id": 16, "title": "Tamaño", "value": "6.8" },
+          { "id": 17, "title": "Tipo", "value": "OLED" }
+        ]
+      }
+    ],
+    "photos": [
+      { "id": 9, "url": "https://example.com/pixelultra.jpg", "order": 1 }
+    ],
+    "categories": [
+      { "category": { "id": 2, "name": "Smartphones", "parentId": 3 }, "ranking": 3, "isMostSpecific": true },
+      { "category": { "id": 3, "name": "Electrónica", "parentId": null }, "ranking": 10, "isMostSpecific": false }
+    ]
+  },
+  {
+    "id": 8,
+    "name": "Auriculares Gamer Pro",
+    "description": "Auriculares con sonido envolvente 7.1 y micrófono desmontable.",
+    "condition": "new",
+    "isReturnable": true,
+    "creationDate": "2025-08-15T00:00:00.000Z",
+    "warranty": { "duration": 18, "unit": "months" },
+    "status": "active",
+    "reviewScore": 4.3,
+    "specificationGroups": [
+      {
+        "id": 9,
+        "title": "Características",
+        "specificationType": "LIST",
+        "items": [
+          { "id": 18, "value": "Sonido 7.1" },
+          { "id": 19, "value": "Micrófono desmontable" }
+        ]
+      }
+    ],
+    "photos": [
+      { "id": 10, "url": "https://example.com/headphones2.jpg", "order": 1 }
+    ],
+    "categories": [
+      { "category": { "id": 4, "name": "Auriculares", "parentId": 3 }, "ranking": 5, "isMostSpecific": true },
+      { "category": { "id": 3, "name": "Electrónica", "parentId": null }, "ranking": 20, "isMostSpecific": false }
+    ]
+  },
+  {
+    "id": 9,
+    "name": "Notebook UltraLight X1",
+    "description": "Portátil ultraligera con procesador Ryzen 7 y pantalla OLED.",
+    "condition": "new",
+    "isReturnable": true,
+    "creationDate": "2025-08-15T00:00:00.000Z",
+    "warranty": { "duration": 24, "unit": "months" },
+    "status": "active",
+    "reviewScore": 4.7,
+    "specificationGroups": [
+      {
+        "id": 10,
+        "title": "Hardware",
+        "specificationType": "TABLE",
+        "items": [
+          { "id": 20, "title": "CPU", "value": "Ryzen 7" },
+          { "id": 21, "title": "RAM", "value": "16GB" },
+          { "id": 22, "title": "SSD", "value": "1TB" }
+        ]
+      }
+    ],
+    "photos": [
+      { "id": 11, "url": "https://example.com/laptop2.jpg", "order": 1 }
+    ],
+    "categories": [
+      { "category": { "id": 5, "name": "Notebooks", "parentId": 6 }, "ranking": 2, "isMostSpecific": true },
+      { "category": { "id": 6, "name": "Computación", "parentId": null }, "ranking": 8, "isMostSpecific": false }
+    ]
+  },
+  {
+    "id": 10,
+    "name": "Smart TV 65 OLED Pro",
+    "description": "Televisor OLED 4K con Dolby Vision y 120Hz.",
+    "condition": "new",
+    "isReturnable": true,
+    "creationDate": "2025-08-15T00:00:00.000Z",
+    "warranty": { "duration": 36, "unit": "months" },
+    "status": "active",
+    "reviewScore": 4.9,
+    "specificationGroups": [
+      {
+        "id": 11,
+        "title": "Pantalla",
+        "specificationType": "TABLE",
+        "items": [
+          { "id": 23, "title": "Tamaño", "value": "65" },
+          { "id": 24, "title": "Resolución", "value": "4K" },
+          { "id": 25, "title": "HDR", "value": "Sí" }
+        ]
+      }
+    ],
+    "photos": [
+      { "id": 12, "url": "https://example.com/tv2.jpg", "order": 1 }
+    ],
+    "categories": [
+      { "category": { "id": 7, "name": "Televisores", "parentId": 3 }, "ranking": 1, "isMostSpecific": true },
+      { "category": { "id": 3, "name": "Electrónica", "parentId": null }, "ranking": 6, "isMostSpecific": false }
+    ]
   }
 ]
