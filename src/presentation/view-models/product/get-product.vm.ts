@@ -5,6 +5,7 @@ import { SellerVM } from "../common/seller.vm";
 import { ProductPhotoVM } from "./product.photo.vm";
 
 export class GetProductVM {
+  id: number;
   name: string;
   description: string;
   condition: string;
@@ -19,6 +20,7 @@ export class GetProductVM {
   photos: ProductPhotoVM[];
 
   constructor(product: Product) {
+    this.id = product.id;
     this.name = product.name;
     this.description = product.description;
     this.condition = product.condition;
