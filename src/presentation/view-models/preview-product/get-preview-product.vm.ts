@@ -1,8 +1,8 @@
-import { ApiProperty } from "@nestjs/swagger";
 import { Product } from "src/domain/models/product/product";
 import { InstallmentPlanVM } from "../common/installment-plan.vm";
 import { PriceVM } from "../common/price.vm";
 import { DiscountVM } from "../common/discount.vm";
+import { ApiProperty } from '@nestjs/swagger';
 
 export class GetPreviewProductVM {
     @ApiProperty({ example: 1, description: 'The unique identifier of the product' })
@@ -10,10 +10,10 @@ export class GetPreviewProductVM {
 
     @ApiProperty({ example: 'Apple iPhone 13 Pro', description: 'The name of the product' })
     name: string;
-
-    @ApiProperty({ type: () => PriceVM, description: 'The original price of the product' })
+    
+    @ApiProperty({ type: () => PriceVM, description: 'The base price' })
     originalPrice: PriceVM;
-
+    
     @ApiProperty({ type: () => PriceVM, description: 'The discounted price of the product, if there is an available discount' })
     discountedPrice: PriceVM;
 
@@ -22,8 +22,8 @@ export class GetPreviewProductVM {
 
     @ApiProperty({ type: () => InstallmentPlanVM, required: false, description: 'The installment plan for the product' })
     priceWithInstallments?: InstallmentPlanVM;
-
-    @ApiProperty({ example: true, description: 'Indicates if the product has free shipping' })
+  
+    @ApiProperty({ type: () => InstallmentPlanVM, required: false, description: 'indicates if there is a free shipping' })
     isFreeShipping: boolean;
 
     constructor(product: Product) {

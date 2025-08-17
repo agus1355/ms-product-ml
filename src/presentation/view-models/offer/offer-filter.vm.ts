@@ -4,6 +4,7 @@ import { OfferType } from 'src/domain/enums/offer-type';
 import { ApiProperty } from '@nestjs/swagger';
 
 export class OfferFilterVM {
+
     @ApiProperty({
         description: 'A comma-separated list of offer types to filter by',
         required: false,
@@ -20,12 +21,6 @@ export class OfferFilterVM {
     })
     offerTypes?: OfferType[];
 
-    @ApiProperty({
-        description: 'The maximum number of offers to return',
-        required: false,
-        type: Number,
-        example: 10
-    })
     @IsOptional()
     limit?: number = 5;
 }
