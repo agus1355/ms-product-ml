@@ -2,8 +2,9 @@ import { Inject, Injectable, NotFoundException } from '@nestjs/common';
 import { TOKENS } from 'src/application/tokens';
 import { Category } from '../models/category';
 import { IOfferRepository } from 'src/application/ports/offer.repository.interface';
-import { Offer } from '../models/offer';
+import { Offer } from '../models/offer/offer';
 import { OfferType } from '../enums/offer-type';
+import { OfferNotFoundException } from '../exceptions/OfferNotFoundException';
 
 @Injectable()
 export class OfferService {
@@ -25,9 +26,9 @@ export class OfferService {
 
     async getAllOffersByProductId(productId: number, limit?: number): Promise<Offer[]> {
         const offers = await this.offerRepository.findBy({productId});
-        if (!offers || offers.length === 0) {
-            throw new NotFoundException(`No offers found for product with ID ${productId}`);
-        }
+        // if (!offers || offers.length === 0) {
+        //     throw new NotFoundException(`No offers found for product with ID ${productId}`);
+        // }
         if(limit){
             return offers.slice(0, limit);
         }
@@ -37,7 +38,7 @@ export class OfferService {
     async getBestPricedOfferByProductId(productId: number): Promise<Offer> {
         const bestPricedOffer = await this.offerRepository.findBestPriceOfferByProductId(productId);
         if (!bestPricedOffer) {
-            throw new NotFoundException(`No offers found for product with ID ${productId}`);
+            throw new OfferNotFoundException(productId);
         }
         return bestPricedOffer;
     }

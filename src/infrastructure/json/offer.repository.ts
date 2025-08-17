@@ -1,8 +1,9 @@
 import { Injectable } from '@nestjs/common';
 import { JsonRepository } from './json.repository';
-import { Offer } from 'src/domain/models/offer';
+import { Offer } from 'src/domain/models/offer/offer';
 import { IOfferRepository } from 'src/application/ports/offer.repository.interface';
-import { toDomainOffer, toPersistenceOffer } from './mappers/offer.mapper';
+import { toDomainOffer, toPersistenceOffer } from './mappers/offer/offer.mapper';
+import { OfferType } from 'src/domain/enums/offer-type';
 
 @Injectable()
 export class OfferRepository extends JsonRepository<Offer> implements IOfferRepository {
@@ -11,14 +12,11 @@ export class OfferRepository extends JsonRepository<Offer> implements IOfferRepo
   }
 
   async findBestPriceOfferByProductId(productId: number): Promise<Offer | null>{
-    const offers = this.data.filter(offer => offer.productId === productId);
-    if (offers.length === 0) {
+    const rawBestPriceOffer = this.data.find(offer => offer.productId === productId && offer.offerType === OfferType.BEST_PRICE);
+    if (!rawBestPriceOffer) {
       return null;
     }
-    const bestPriceOffer = offers.reduce((bestOffer, currentOffer) => 
-      currentOffer.basePrice.amount < bestOffer.basePrice.amount ? currentOffer : bestOffer
-    );
-    return this.mapToDomain(bestPriceOffer);
+    return this.mapToDomain(rawBestPriceOffer);
   }
 
   async findByProductIdAndOfferTypes(productId: number, offerTypes: string[]): Promise<Offer[]> {

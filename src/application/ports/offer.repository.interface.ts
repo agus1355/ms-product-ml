@@ -1,4 +1,4 @@
-import { Offer } from "src/domain/models/offer";
+import { Offer } from "src/domain/models/offer/offer";
 import { IRepository } from "./repository.interface";
 
 

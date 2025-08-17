@@ -2,7 +2,7 @@ import { Injectable, Inject } from '@nestjs/common';
 import { CACHE_MANAGER } from '@nestjs/cache-manager';
 import { Cache } from 'cache-manager';
 import { IOfferRepository } from 'src/application/ports/offer.repository.interface';
-import { Offer } from 'src/domain/models/offer';
+import { Offer } from 'src/domain/models/offer/offer';
 
 @Injectable()
 export class CachedOfferRepository implements IOfferRepository {

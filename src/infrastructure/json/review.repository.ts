@@ -2,7 +2,7 @@ import { Injectable } from '@nestjs/common';
 import { Review } from 'src/domain/models/review/review';
 import { JsonRepository } from './json.repository';
 import { IReviewRepository } from 'src/application/ports/review.repository.interface.ts';
-import { toDomainReview, toPersistenceReview } from './mappers/review.mapper';
+import { toDomainReview, toPersistenceReview } from './mappers/product/review.mapper';
 
 @Injectable()
 export class ReviewRepository extends JsonRepository<Review> implements IReviewRepository {

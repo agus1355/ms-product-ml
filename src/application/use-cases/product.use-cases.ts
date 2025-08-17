@@ -18,7 +18,7 @@ export class ProductUseCases {
         const product = await this.productService.getProductById(productId);
         const relatedProducts = await this.productService.getRelatedProductsByCategoriesAndLimit(product.categories, productId, limit);
         for (const relatedProduct of relatedProducts) {
-            relatedProduct.bestOffers.push(await this.offerService.getBestPricedOfferByProductId(relatedProduct.id));
+            relatedProduct.bestOffer = await this.offerService.getBestPricedOfferByProductId(relatedProduct.id);
         }
         return relatedProducts;
     }

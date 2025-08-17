@@ -2,11 +2,11 @@ import { InstallmentPlanVM } from "../common/installment-plan.vm";
 import { PriceVM } from "../common/price.vm";
 import { SellerVM } from "../common/seller.vm";
 import { ShipmentVM } from "./shipment.vm";
-import { Offer } from "src/domain/models/offer";
+import { Offer } from "src/domain/models/offer/offer";
 
 export class OfferVM {
   readonly basePrice: PriceVM;
-  readonly priceWithoutVAT: PriceVM;
+  readonly priceWithoutTaxes: PriceVM;
   readonly installmentPlan: InstallmentPlanVM | null;
   readonly shipments: ShipmentVM[];
   readonly date: Date;
@@ -17,7 +17,7 @@ export class OfferVM {
 
   constructor(offer: Offer) {
     this.basePrice = new PriceVM(offer.basePrice);
-    this.priceWithoutVAT = new PriceVM(offer.priceWithoutVAT);
+    this.priceWithoutTaxes = new PriceVM(offer.priceWithoutTaxes);
     this.installmentPlan = offer.installmentPlan
       ? new InstallmentPlanVM(offer.installmentPlan)
       : null;

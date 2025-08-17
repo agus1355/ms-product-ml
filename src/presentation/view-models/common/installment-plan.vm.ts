@@ -1,4 +1,4 @@
-import { InstallmentPlan } from 'src/domain/models/installment-plan';
+import { InstallmentPlan } from 'src/domain/models/offer/installment-plan';
 import { PriceVM } from './price.vm';
 
 export class InstallmentPlanVM {

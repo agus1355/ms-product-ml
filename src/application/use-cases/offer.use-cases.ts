@@ -1,6 +1,6 @@
 import { Injectable } from '@nestjs/common';
 import { OfferType } from 'src/domain/enums/offer-type';
-import { Offer } from 'src/domain/models/offer';
+import { Offer } from 'src/domain/models/offer/offer';
 import { OfferService } from 'src/domain/services/offer.service';
 
 @Injectable()

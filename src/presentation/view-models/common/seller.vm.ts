@@ -1,4 +1,4 @@
-import { Seller } from "src/domain/models/seller";
+import { Seller } from "src/domain/models/offer/seller";
 
 export class SellerVM {
   name: string;
