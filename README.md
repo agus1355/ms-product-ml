@@ -4,10 +4,16 @@
 
 This project follows a **Hexagonal Architecture (Ports & Adapters)** approach to separate business logic from infrastructure.
 
-* **Domain Layer:** Contains core business logic, entities (e.g., `Offer`, `Product`, `Discount`) and value objects.
-* **Application Layer / Use Cases:** Implements the main operations like creating offers, calculating prices, applying discounts.
+* **Domain Layer:** Contains core business logic, entities (e.g., `Offer`, `Product`), and value objects. It also includes repository interfaces, which are implemented in the infrastructure layer.
+* **Application Layer / Use Cases:** Layer responsible for orchestrating the steps necessary to fulfill a functionality. Delegates its responsibilities to services or repositories.
 * **Infrastructure Layer:** Includes repositories for database, external services, and caching.
 * **Presentation Layer:** REST controllers exposing API endpoints.
+
+
+### Core Domain Classes:
+
+* **Product**: Contains all static information about a product, like name, description, and attributes. Multiple sellers can use the same product.
+* **Offer**: Contains specific sale information for a product, like price, discounts, installment plans, and shipments. Allows each seller to create their own offers, enabling features like interest-free installments, faster shipping, or competition between sellers.
 
 ## Main Endpoints
 
