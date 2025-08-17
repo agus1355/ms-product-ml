@@ -1,20 +1,29 @@
 import { Product } from 'src/domain/models/product/product';
+import { toDomainProductPhoto } from './product-photo.mapper';
+import { toDomainProductCategory } from './product-category.mapper';
+import { toDomainWarranty } from './warranty.mapper';
 
 export function toDomainProduct(raw: any): Product {
+  const photos = (raw.photos || []).map(toDomainProductPhoto);
+  const categories = (raw.categories || []).map(toDomainProductCategory);
+  const warranty = raw.warranty ? toDomainWarranty(raw.warranty) : undefined;
+  const reviews = raw.reviews || [];
+  const specificationGroups = raw.specificationGroups || [];
+
   return new Product(
     raw.id,
     raw.name,
     raw.description,
-    raw.specificationGroups,
+    specificationGroups,
     raw.condition,
     raw.isReturnable,
     new Date(raw.creationDate),
-    raw.warranty,
     raw.status,
     raw.reviewScore,
-    raw.photos,
-    raw.reviews,
-    raw.categories,
+    photos,
+    reviews,
+    categories,
+    warranty,
     raw.bestOffers || []
   );
 }
