@@ -6,6 +6,7 @@ import { InstallmentPlan } from "./installment-plan";
 import { Seller } from "./seller";
 import { Shipment } from "./shipment";
 import { Discount } from "./discount";
+import { InsufficientStockException } from "src/domain/exceptions/InsufficientStockException";
 
 export class Offer {
   constructor(
@@ -44,7 +45,7 @@ export class Offer {
     if (this.availableStock >= quantity) {
       this.availableStock -= quantity;
     } else {
-      throw new Error('Insufficient stock available');
+      throw new InsufficientStockException();
     }
   }
 

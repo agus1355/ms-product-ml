@@ -4,6 +4,7 @@ import { Review } from "../review/review";
 import { SpecificationGroup } from "../specifications/specification-group";
 import { Warranty } from "./warranty";
 import { Offer } from "../offer/offer";
+import { OfferNotFoundException } from "src/domain/exceptions/OfferNotFoundException";
 
 export class Product {
   constructor(
@@ -27,7 +28,7 @@ export class Product {
 
   public getBestOffer(): Offer {
     if (!this.bestOffer) {
-      throw new Error('Best offer is not available for this product');
+      throw new OfferNotFoundException();
     }
     return this.bestOffer;
   }
