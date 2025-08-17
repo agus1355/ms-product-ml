@@ -1,12 +1,24 @@
-version: '3.8'
-
 services:
-  app:
-    container_name: ms-product-ml-nestjs
+  app-dev:
+    profiles: ["dev"]
+    container_name: ms-product-ml-nestjs-dev
     build:
       context: .
       dockerfile: Dockerfile
     command: npm run start:dev
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/usr/src/app
+      - /usr/src/app/node_modules
+
+  app-debug:
+    profiles: ["debug"]
+    container_name: ms-product-ml-nestjs-debug
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: npm run start:debug
     ports:
       - "3000:3000"
       - "9229:9229"
