@@ -24,5 +24,6 @@ export class OfferFilterVM {
     })
     @IsOptional()
     @IsPositive()
+    @Transform(({ value }) => parseInt(value, 10))
     limit?: number = 5;
 }

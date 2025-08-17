@@ -42,6 +42,7 @@ export class GetProductVM {
   photos: ProductPhotoVM[];
 
   constructor(product: Product) {
+    this.id = product.id;
     this.name = product.name;
     this.description = product.description;
     this.condition = product.condition;
