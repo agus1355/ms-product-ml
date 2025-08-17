@@ -2,6 +2,7 @@ import { Product } from "src/domain/models/product/product";
 import { InstallmentPlanVM } from "../common/installment-plan.vm";
 import { PriceVM } from "../common/price.vm";
 import { DiscountVM } from "../common/discount.vm";
+import { ApiProperty } from '@nestjs/swagger';
 
 export class GetPreviewProductVM {
     @ApiProperty({ example: 1, description: 'The unique identifier of the product' })

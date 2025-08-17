@@ -3,6 +3,7 @@ import { ProductCategoryVM } from "./product-category.vm";
 import { SpecificationGroupVM } from "./specification-group.vm";
 import { SellerVM } from "../common/seller.vm";
 import { ProductPhotoVM } from "./product.photo.vm";
+import { ApiProperty } from '@nestjs/swagger';
 
 export class GetProductVM {
   @ApiProperty({ example: 1, description: 'The unique identifier of the product' })
