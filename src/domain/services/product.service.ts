@@ -3,7 +3,6 @@ import { TOKENS } from 'src/application/tokens';
 import { Product } from '../models/product/product';
 import { IProductRepository } from 'src/application/ports/product.repository.interface';
 import { ProductNotFoundException } from '../exceptions/ProductNotFoundException';
-import { Category } from '../models/category';
 import { ProductCategory } from '../models/product/product-category';
 
 @Injectable()

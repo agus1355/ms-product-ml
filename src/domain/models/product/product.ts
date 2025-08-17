@@ -1,7 +1,6 @@
 import { ProductPhoto } from "./product-photo";
 import { ProductCategory } from "./product-category";
 import { Review } from "../review/review";
-import { Seller } from "../seller";
 import { SpecificationGroup } from "../specifications/specification-group";
 import { Warranty } from "./warranty";
 import { Offer } from "../offer";
@@ -16,12 +15,12 @@ export class Product {
     public readonly condition: string,
     public readonly isReturnable: boolean,
     public readonly creationDate: Date,
-    public readonly warranty: Warranty,
     public readonly status: string,
     public readonly reviewScore: number,
     public readonly photos: ProductPhoto[],
     public readonly reviews: Review[] = [],
     public readonly categories: ProductCategory[] = [],
+    public readonly warranty?: Warranty,
     bestOffers?: Offer[]
   ) {
     this.bestOffers = bestOffers || [];

@@ -10,7 +10,7 @@ export class ReviewVM {
   constructor(review: Review) {
     this.score = review.score;
     this.description = review.description;
-    this.date = review.date.toString();
+    this.date = review.date.toISOString();
     this.photos = review.photos?.map((p) => new ReviewPhotoVM(p)) || [];
   }
 }

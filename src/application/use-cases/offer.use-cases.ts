@@ -15,8 +15,4 @@ export class OfferUseCases {
         }
         return this.offerService.getAllOffersByProductId(productId, limit);
     }
-
-    async getAllOffersByProductIdAndLimit(productId: number, limit: number): Promise<Offer[]> {
-        return this.offerService.getAllOffersByProductId(productId, limit);
-    }
 }
