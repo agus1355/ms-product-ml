@@ -3,41 +3,46 @@ import { IRepository } from 'src/application/ports/repository.interface';
 
 export abstract class JsonRepository<T> implements IRepository<T> {
   protected readonly filePath: string;
-  protected data: T[];
+  protected data: any[];
+  protected readonly mapToDomain: (raw: any) => T;
+  protected readonly mapToPersistence?: (entity: T) => any;
 
-  constructor(jsonFilePath: string) {
+  constructor(jsonFilePath: string, mapToDomain: (raw: any) => T, mapToPersistence?: (entity: T) => any) {
     this.filePath = jsonFilePath;
     const raw = fs.readFileSync(this.filePath, 'utf-8');
     this.data = JSON.parse(raw);
+    this.mapToDomain = mapToDomain;
+    this.mapToPersistence = mapToPersistence;
   }
 
   async findAll(): Promise<T[]> {
-    return this.data;
+    return this.data.map((r) => this.mapToDomain(r));
   }
 
   async findBy(criteria: Partial<T>): Promise<T[]> {
-    return this.data.filter((item) =>
-      Object.entries(criteria).every(([key, value]) => item[key as keyof T] === value),
+    const raws = this.data.filter((item) =>
+      Object.entries(criteria).every(([key, value]) => item[key as keyof typeof item] === value),
     );
+    return raws.map((r) => this.mapToDomain(r));
   }
 
   async findOneBy(criteria: Partial<T>): Promise<T | null> {
-    const found = this.data.find((item) =>
-      Object.entries(criteria).every(([key, value]) => item[key as keyof T] === value),
+    const raw = this.data.find((item) =>
+      Object.entries(criteria).every(([key, value]) => item[key as keyof typeof item] === value),
     );
-    return found || null;
+    return raw ? this.mapToDomain(raw) : null;
   }
 
   async save(entity: T): Promise<T> {
-    this.data.push(entity);
+    const persisted = this.mapToPersistence ? this.mapToPersistence(entity) : (entity as any);
+    this.data.push(persisted);
     this.persist();
     return entity;
   }
 
   async delete(criteria: Partial<T>): Promise<void> {
     this.data = this.data.filter(
-      (item) =>
-        !Object.entries(criteria).every(([key, value]) => item[key as keyof T] === value),
+      (item) => !Object.entries(criteria).every(([key, value]) => item[key as keyof typeof item] === value),
     );
     this.persist();
   }
