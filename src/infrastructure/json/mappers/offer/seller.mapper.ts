@@ -1,4 +1,4 @@
-import { Seller } from 'src/domain/models/seller';
+import { Seller } from 'src/domain/models/offer/seller';
 
 export function toDomainSeller(raw: any): Seller {
   return new Seller(raw.id, raw.name, raw.score, raw.isVerified);

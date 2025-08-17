@@ -3,10 +3,9 @@ import { ProductCategory } from "./product-category";
 import { Review } from "../review/review";
 import { SpecificationGroup } from "../specifications/specification-group";
 import { Warranty } from "./warranty";
-import { Offer } from "../offer";
+import { Offer } from "../offer/offer";
 
 export class Product {
-  public readonly bestOffers: Offer[] = [];
   constructor(
     public readonly id: number,
     public readonly name: string,
@@ -16,13 +15,30 @@ export class Product {
     public readonly isReturnable: boolean,
     public readonly creationDate: Date,
     public readonly status: string,
-    public readonly reviewScore: number,
+    public reviewScore: number,
     public readonly photos: ProductPhoto[],
     public readonly reviews: Review[] = [],
     public readonly categories: ProductCategory[] = [],
     public readonly warranty?: Warranty,
-    bestOffers?: Offer[]
+    public bestOffer?: Offer
   ) {
-    this.bestOffers = bestOffers || [];
+    // this.bestOffers = bestOffers || [];
+  }
+
+  public getBestOffer(): Offer {
+    if (!this.bestOffer) {
+      throw new Error('Best offer is not available for this product');
+    }
+    return this.bestOffer;
+  }
+
+  public calculateReviewScore(): number {
+    if (this.reviews.length === 0) {
+      this.reviewScore = 0;
+      return this.reviewScore;
+    }
+    const totalScore = this.reviews.reduce((sum, review) => sum + review.score, 0);
+    this.reviewScore = totalScore / this.reviews.length;
+    return this.reviewScore;
   }
 }

@@ -1,6 +1,6 @@
 import { Product } from 'src/domain/models/product/product';
-import { toDomainProductPhoto } from './product/product-photo.mapper';
-import { toDomainProductCategory } from './product/product-category.mapper';
+import { toDomainProductPhoto } from './product-photo.mapper';
+import { toDomainProductCategory } from './product-category.mapper';
 import { toDomainWarranty } from './warranty.mapper';
 
 export function toDomainProduct(raw: any): Product {

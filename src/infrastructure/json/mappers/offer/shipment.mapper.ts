@@ -1,5 +1,5 @@
-import { Shipment } from 'src/domain/models/shipment';
-import { toDomainPrice, toPersistencePrice } from './price.mapper';
+import { Shipment } from 'src/domain/models/offer/shipment';
+import { toDomainPrice, toPersistencePrice } from '../price.mapper';
 
 export function toDomainShipment(raw: any): Shipment {
   return new Shipment(raw.type, raw.deliveryTime, toDomainPrice(raw.cost), raw.isFreeForBuyer);
