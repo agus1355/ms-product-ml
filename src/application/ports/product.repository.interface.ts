@@ -4,4 +4,5 @@ import { IRepository } from "./repository.interface";
 
 export interface IProductRepository extends IRepository<Product> {
     findProductsByCategoriesIdAndLimit(categoryIds: number[], productIdToExclude:number, limit: number): Promise<Product[]>;
+    findProductById(productId: number): Promise<Product | null>;
 }

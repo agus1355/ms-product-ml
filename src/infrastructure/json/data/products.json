@@ -26,6 +26,15 @@
         "items": [
           { "id": 3, "title": "Tipo", "value": "Tubeless", "icon": "wheel-icon.png" }
         ]
+      },
+      {
+        "id": 100,
+        "title": "Color",
+        "specificationType": "SELECTIONABLE_LIST",
+        "items": [
+          {"id": 100,"value": "Rojo","selectableValue": "https://shop.example.com/products/123","icon": "color-palette.png"},
+          {"id": 100,"value": "Verde","selectableValue": "https://shop.example.com/products/246","icon": "color-palette.png"}
+        ]
       }
     ],
     "photos": [

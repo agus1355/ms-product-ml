@@ -9,6 +9,26 @@ export class ProductRepository extends JsonRepository<Product> implements IProdu
     super('src/infrastructure/json/data/products.json');
   }
 
+  async findProductById(productId: number): Promise<Product | null> {
+    const product = this.data.find(product => product.id === productId);
+    if (!product) return null;
+    return new Product(
+      product.id,
+      product.name,
+      product.description,
+      product.specificationGroups,
+      product.condition,
+      product.isReturnable,
+      product.creationDate,
+      product.warranty,
+      product.status,
+      product.reviewScore,
+      product.photos,
+      product.reviews,
+      product.categories
+    );
+  }
+
   async findProductsByCategoriesIdAndLimit(categoryIds: number[], productIdToExclude: number, limit: number): Promise<Product[]> {
     const products = this.data.filter(product => 
       product.categories.some(pc => categoryIds.includes(pc.category.id) && product.id !== productIdToExclude)
