@@ -62,6 +62,22 @@
     "offerType": "BEST_INSTALLMENTS",
     "seller": { "id": 3, "name": "TechStore", "score": 4.9, "isVerified": true }
   },
+    {
+    "productId": 2,
+    "basePrice": { "currency": "ARS", "amount": 999 },
+    "priceWithoutTaxes": { "currency": "ARS", "amount": 900 },
+    "discountedPrice": null,
+    "installmentPlan": null,
+    "shipments": [
+      { "type": "Standard", "deliveryTime": "3-5 days", "cost": { "currency": "ARS", "amount": 40 }, "isFreeForBuyer": false },
+      { "type": "Express", "deliveryTime": "1-2 days", "cost": { "currency": "ARS", "amount": 90 }, "isFreeForBuyer": false}
+    ],
+    "date": "2025-08-14T00:00:00.000Z",
+    "status": "ENABLE",
+    "availableStock": 0,
+    "offerType": "BEST_PRICE",
+    "seller": { "id": 3, "name": "TechStore", "score": 4.9, "isVerified": true }
+  },
   {
     "productId": 3,
     "basePrice": { "currency": "ARS", "amount": 150 },
@@ -75,6 +91,21 @@
     "status": "ENABLE",
     "availableStock": 10,
     "offerType": null,
+    "seller": { "id": 4, "name": "AudioWorld", "score": 4.5, "isVerified": false }
+  },
+  {
+    "productId": 3,
+    "basePrice": { "currency": "ARS", "amount": 150 },
+    "priceWithoutTaxes": { "currency": "ARS", "amount": 135 },
+    "discountedPrice": null,
+    "installmentPlan": null,
+    "shipments": [
+      { "type": "Standard", "deliveryTime": "3-5 days", "cost": { "currency": "ARS", "amount": 20 }, "isFreeForBuyer": true}
+    ],
+    "date": "2025-08-15T00:00:00.000Z",
+    "status": "ENABLE",
+    "availableStock": 10,
+    "offerType": "BEST_PRICE",
     "seller": { "id": 4, "name": "AudioWorld", "score": 4.5, "isVerified": false }
   },
   {
@@ -105,6 +136,29 @@
     "offerType": "BEST_SHIPMENT",
     "seller": { "id": 5, "name": "CompuStore", "score": 4.7, "isVerified": true }
   },
+    {
+    "productId": 5,
+    "basePrice": { "currency": "ARS", "amount": 1300 },
+    "priceWithoutTaxes": { "currency": "ARS", "amount": 1200 },
+    "discountedPrice": { "currency": "ARS", "amount": 1170 },
+    "discount": {
+      "discountValue": 0.1,
+      "dateFrom": "2025-08-16T00:00:00.000Z",
+      "dateTo": "2025-08-22T23:59:59.000Z",
+      "creationDate": "2025-08-15T12:00:00.000Z",
+      "enabled": true,
+      "updatedAt": "2025-08-15T12:00:00.000Z"
+    },
+    "shipments": [
+      { "type": "Standard", "deliveryTime": "5-7 days", "cost": { "currency": "ARS", "amount": 60 }, "isFreeForBuyer": true },
+      { "type": "Express", "deliveryTime": "2-3 days", "cost": { "currency": "ARS", "amount": 120 }, "isFreeForBuyer": false }
+    ],
+    "date": "2025-08-17T00:00:00.000Z",
+    "status": "ENABLE",
+    "availableStock": 3,
+    "offerType": "BEST_PRICE",
+    "seller": { "id": 5, "name": "CompuStore", "score": 4.7, "isVerified": true }
+  },
   {
     "productId": 6,
     "basePrice": { "currency": "ARS", "amount": 24999 },
@@ -121,7 +175,7 @@
     "date": "2025-08-10T10:00:00.000Z",
     "status": "ENABLE",
     "availableStock": 15,
-    "offerType": "BEST_INSTALLMENTS",
+    "offerType": "BEST_PRICE",
     "seller": { "id": 201, "name": "SmartTech Store", "score": 4.9, "isVerified": true }
   },
   {
@@ -135,7 +189,7 @@
     "date": "2025-08-12T12:30:00.000Z",
     "status": "ENABLE",
     "availableStock": 40,
-    "offerType": null,
+    "offerType": "BEST_PRICE",
     "seller": { "id": 202, "name": "HomeEssentials", "score": 4.3, "isVerified": false }
   },
   {
@@ -171,6 +225,20 @@
     "offerType": null,
     "seller": { "id": 204, "name": "KitchenPro", "score": 4.4, "isVerified": false }
   },
+    {
+    "productId": 9,
+    "basePrice": { "currency": "ARS", "amount": 14999 },
+    "priceWithoutTaxes": { "currency": "ARS", "amount": 13222 },
+    "installmentPlan": null,
+    "shipments": [
+      { "type": "Standard", "deliveryTime": "2-4 days", "cost": { "currency": "ARS", "amount": 800 }, "isFreeForBuyer": true }
+    ],
+    "date": "2025-08-13T09:20:00.000Z",
+    "status": "ENABLE",
+    "availableStock": 20,
+    "offerType": "BEST_PRICE",
+    "seller": { "id": 204, "name": "KitchenPro", "score": 4.4, "isVerified": false }
+  },
   {
     "productId": 10,
     "basePrice": { "currency": "ARS", "amount": 62000 },
@@ -188,6 +256,21 @@
     "status": "ENABLE",
     "availableStock": 8,
     "offerType": "BEST_SHIPMENT",
+    "seller": { "id": 205, "name": "OutdoorKing", "score": 4.6, "isVerified": true }
+  },
+  {
+    "productId": 10,
+    "basePrice": { "currency": "ARS", "amount": 59000 },
+    "priceWithoutTaxes": { "currency": "ARS", "amount": 51240 },
+    "installmentPlan": null,
+    "shipments": [
+      { "type": "Standard", "deliveryTime": "3-5 days", "cost": { "currency": "ARS", "amount": 1800 }, "isFreeForBuyer": true },
+      { "type": "Express", "deliveryTime": "1-2 days", "cost": { "currency": "ARS", "amount": 3500 }, "isFreeForBuyer": false }
+    ],
+    "date": "2025-08-15T14:00:00.000Z",
+    "status": "ENABLE",
+    "availableStock": 8,
+    "offerType": "BEST_PRICE",
     "seller": { "id": 205, "name": "OutdoorKing", "score": 4.6, "isVerified": true }
   }
 ]

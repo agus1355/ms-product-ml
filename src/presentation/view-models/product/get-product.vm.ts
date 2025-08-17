@@ -5,7 +5,10 @@ import { SellerVM } from "../common/seller.vm";
 import { ProductPhotoVM } from "./product.photo.vm";
 
 export class GetProductVM {
+  @ApiProperty({ example: 1, description: 'The unique identifier of the product' })
   id: number;
+
+  @ApiProperty({ example: 'Apple iPhone 13 Pro', description: 'The name of the product' })
   name: string;
   description: string;
   condition: string;

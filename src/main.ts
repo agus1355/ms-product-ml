@@ -15,6 +15,14 @@ async function bootstrap() {
     }),
   );
 
+  const config = new DocumentBuilder()
+    .setTitle('Products API')
+    .setDescription('Backend API for getting products, offers, and reviews')
+    .setVersion('1.0')
+    .build();
+  const document = SwaggerModule.createDocument(app, config);
+  SwaggerModule.setup('api', app, document);
+
   app.useGlobalInterceptors(new LoggerInterceptor());
   app.useGlobalFilters(new HttpExceptionFilter());
   
