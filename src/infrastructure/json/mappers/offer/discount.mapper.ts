@@ -1,5 +1,3 @@
-import { Shipment } from 'src/domain/models/offer/shipment';
-import { toDomainPrice, toPersistencePrice } from '../price.mapper';
 import { Discount } from 'src/domain/models/offer/discount';
 
 export function toDomainDiscount(raw: any): Discount {
@@ -13,7 +11,7 @@ export function toDomainDiscount(raw: any): Discount {
   );
 }
 
-export function toPersistenceShipment(discount: Discount): any {
+export function toPersistenceDiscount(discount: Discount): any {
   return {
     discountValue: discount.discountValue,
     dateFrom: discount.dateFrom.toISOString(),

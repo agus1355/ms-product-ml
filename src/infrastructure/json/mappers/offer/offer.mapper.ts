@@ -8,7 +8,7 @@ export function toDomainOffer(raw: any): Offer {
   return new Offer(
     toDomainPrice(raw.basePrice),
     toDomainPrice(raw.priceWithoutTaxes),
-    raw.discountedPrince ? toDomainPrice(raw.discountedPrice) : null,
+    raw.discountedPrice ? toDomainPrice(raw.discountedPrice) : null,
     raw.installmentPlan ? toDomainInstallmentPlan(raw.installmentPlan) : null,
     raw.discount ? toDomainDiscount(raw.discount) : null,
     new Date(raw.date),
