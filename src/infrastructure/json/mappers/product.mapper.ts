@@ -1,7 +1,7 @@
 import { Product } from 'src/domain/models/product/product';
 import { toDomainProductPhoto } from './product/product-photo.mapper';
 import { toDomainProductCategory } from './product/product-category.mapper';
-import { toDomainWarranty } from './warranty.mapper';
+import { toDomainWarranty } from './product/warranty.mapper';
 
 export function toDomainProduct(raw: any): Product {
   const photos = (raw.photos || []).map(toDomainProductPhoto);
