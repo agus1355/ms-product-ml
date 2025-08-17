@@ -1,4 +1,4 @@
-import { IsOptional, IsArray, IsEnum, IsNumber, IsPositive } from 'class-validator';
+import { IsOptional, IsArray, IsEnum, IsPositive } from 'class-validator';
 import { Transform } from 'class-transformer';
 import { OfferType } from 'src/domain/enums/offer-type';
 import { ApiProperty } from '@nestjs/swagger';
@@ -8,12 +8,16 @@ export class OfferFilterVM {
         description: 'A comma-separated list of offer types to filter by',
         required: false,
         type: String,
-        example: 'Flash,Hot'
+        example: 'BEST_PRICE,BEST_INSTALLMENT,BEST_SHIPMENT'
     })
     @IsOptional()
     @IsArray()
-    @IsEnum(OfferType, { each: true })
-    @Transform(({ value }) => value.split(','))
+    @Transform(({ value }) => {
+        if (typeof value === 'string') {
+        return value.split(',').map((v) => v.trim());
+        }
+        return value;
+    })
     offerTypes?: OfferType[];
 
     @ApiProperty({
@@ -23,7 +27,5 @@ export class OfferFilterVM {
         example: 10
     })
     @IsOptional()
-    @IsPositive()
-    @Transform(({ value }) => parseInt(value, 10))
     limit?: number = 5;
 }
