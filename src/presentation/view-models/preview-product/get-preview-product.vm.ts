@@ -10,15 +10,13 @@ export class GetPreviewProductVM {
     isFreeShipping: boolean;
 
     constructor(product: Product) {
-        const offer = product.bestOffers[0];
-        
         this.name = product.name
-        this.originalPrice = new PriceVM(offer.basePrice);
+        this.originalPrice = new PriceVM(product.getBestOffer().basePrice);
         //this.discountedPrice
-        if (offer.installmentPlan) {
-            this.priceWithInstallments = new InstallmentPlanVM(offer.installmentPlan);
+        if (product.bestOffer?.installmentPlan) {
+            this.priceWithInstallments = new InstallmentPlanVM(product.bestOffer?.installmentPlan);
         }
         
-        this.isFreeShipping = offer.shipments.some(shipment => shipment.isFreeForBuyer);
+        this.isFreeShipping = product.getBestOffer().shipments.some(shipment => shipment.isFreeForBuyer);
     }
 }

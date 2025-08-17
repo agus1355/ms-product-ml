@@ -2,10 +2,19 @@
   {
     "productId": 1,
     "basePrice": { "currency": "ARS", "amount": 1200 },
-    "priceWithoutVAT": { "currency": "ARS", "amount": 1000 },
+    "priceWithoutTaxes": { "currency": "ARS", "amount": 1000 },
+    "discountedPrice": { "currency": "ARS", "amount": 960 },
+    "discount": {
+      "discountValue": 0.2,
+      "dateFrom": "2025-08-14T00:00:00.000Z",
+      "dateTo": "2025-08-20T23:59:59.000Z",
+      "creationDate": "2025-08-13T10:00:00.000Z",
+      "enabled": true,
+      "updatedAt": "2025-08-13T10:00:00.000Z"
+    },
     "installmentPlan": {
       "numberOfInstallments": 12,
-      "installmentAmount": { "currency": "ARS", "amount": 100 },
+      "installmentAmount": { "currency": "ARS", "amount": 84 },
       "interestRate": 0.05
     },
     "shipments": [
@@ -21,7 +30,8 @@
   {
     "productId": 1,
     "basePrice": { "currency": "ARS", "amount": 1250 },
-    "priceWithoutVAT": { "currency": "ARS", "amount": 1040 },
+    "priceWithoutTaxes": { "currency": "ARS", "amount": 1040 },
+    "discountedPrice": null,
     "installmentPlan": null,
     "shipments": [
       { "type": "Standard", "deliveryTime": "4-6 days", "cost": { "currency": "ARS", "amount": 60 }, "isFreeForBuyer": true }
@@ -35,7 +45,8 @@
   {
     "productId": 2,
     "basePrice": { "currency": "ARS", "amount": 999 },
-    "priceWithoutVAT": { "currency": "ARS", "amount": 900 },
+    "priceWithoutTaxes": { "currency": "ARS", "amount": 900 },
+    "discountedPrice": null,
     "installmentPlan": {
       "numberOfInstallments": 6,
       "installmentAmount": { "currency": "ARS", "amount": 170 },
@@ -54,7 +65,8 @@
   {
     "productId": 3,
     "basePrice": { "currency": "ARS", "amount": 150 },
-    "priceWithoutVAT": { "currency": "ARS", "amount": 135 },
+    "priceWithoutTaxes": { "currency": "ARS", "amount": 135 },
+    "discountedPrice": null,
     "installmentPlan": null,
     "shipments": [
       { "type": "Standard", "deliveryTime": "3-5 days", "cost": { "currency": "ARS", "amount": 20 }, "isFreeForBuyer": true}
@@ -68,29 +80,19 @@
   {
     "productId": 4,
     "basePrice": { "currency": "ARS", "amount": 1300 },
-    "priceWithoutVAT": { "currency": "ARS", "amount": 1200 },
-    "installmentPlan": {
-      "numberOfInstallments": 10,
-      "installmentAmount": { "currency": "ARS", "amount": 130 },
-      "interestRate": 0.02
+    "priceWithoutTaxes": { "currency": "ARS", "amount": 1200 },
+    "discountedPrice": { "currency": "ARS", "amount": 1170 },
+    "discount": {
+      "discountValue": 0.1,
+      "dateFrom": "2025-08-16T00:00:00.000Z",
+      "dateTo": "2025-08-22T23:59:59.000Z",
+      "creationDate": "2025-08-15T12:00:00.000Z",
+      "enabled": true,
+      "updatedAt": "2025-08-15T12:00:00.000Z"
     },
-    "shipments": [
-      { "type": "Standard", "deliveryTime": "5-7 days", "cost": { "currency": "ARS", "amount": 60 }, "isFreeForBuyer": true },
-      { "type": "Express", "deliveryTime": "2-3 days", "cost": { "currency": "ARS", "amount": 120 }, "isFreeForBuyer": false }
-    ],
-    "date": "2025-08-17T00:00:00.000Z",
-    "status": "ENABLE",
-    "availableStock": 3,
-    "offerType": "BEST_SHIPMENT",
-    "seller": { "id": 5, "name": "CompuStore", "score": 4.7, "isVerified": true }
-  },
-    {
-    "productId": 5,
-    "basePrice": { "currency": "ARS", "amount": 1400 },
-    "priceWithoutVAT": { "currency": "ARS", "amount": 1300 },
     "installmentPlan": {
       "numberOfInstallments": 10,
-      "installmentAmount": { "currency": "ARS", "amount": 140 },
+      "installmentAmount": { "currency": "ARS", "amount": 117 },
       "interestRate": 0.02
     },
     "shipments": [
@@ -106,7 +108,7 @@
   {
     "productId": 6,
     "basePrice": { "currency": "ARS", "amount": 24999 },
-    "priceWithoutVAT": { "currency": "ARS", "amount": 20660 },
+    "priceWithoutTaxes": { "currency": "ARS", "amount": 20660 },
     "installmentPlan": {
       "numberOfInstallments": 6,
       "installmentAmount": { "currency": "ARS", "amount": 4166.5 },
@@ -125,7 +127,7 @@
   {
     "productId": 7,
     "basePrice": { "currency": "ARS", "amount": 8999 },
-    "priceWithoutVAT": { "currency": "ARS", "amount": 7446 },
+    "priceWithoutTaxes": { "currency": "ARS", "amount": 7446 },
     "installmentPlan": null,
     "shipments": [
       { "type": "Standard", "deliveryTime": "5-7 days", "cost": { "currency": "ARS", "amount": 900 }, "isFreeForBuyer": false }
@@ -139,7 +141,7 @@
   {
     "productId": 8,
     "basePrice": { "currency": "ARS", "amount": 135000 },
-    "priceWithoutVAT": { "currency": "ARS", "amount": 111570 },
+    "priceWithoutTaxes": { "currency": "ARS", "amount": 111570 },
     "installmentPlan": {
       "numberOfInstallments": 12,
       "installmentAmount": { "currency": "ARS", "amount": 11250 },
@@ -158,7 +160,7 @@
   {
     "productId": 9,
     "basePrice": { "currency": "ARS", "amount": 15999 },
-    "priceWithoutVAT": { "currency": "ARS", "amount": 13222 },
+    "priceWithoutTaxes": { "currency": "ARS", "amount": 13222 },
     "installmentPlan": null,
     "shipments": [
       { "type": "Standard", "deliveryTime": "2-4 days", "cost": { "currency": "ARS", "amount": 800 }, "isFreeForBuyer": true }
@@ -172,7 +174,7 @@
   {
     "productId": 10,
     "basePrice": { "currency": "ARS", "amount": 62000 },
-    "priceWithoutVAT": { "currency": "ARS", "amount": 51240 },
+    "priceWithoutTaxes": { "currency": "ARS", "amount": 51240 },
     "installmentPlan": {
       "numberOfInstallments": 6,
       "installmentAmount": { "currency": "ARS", "amount": 10333.33 },
@@ -187,5 +189,5 @@
     "availableStock": 8,
     "offerType": "BEST_SHIPMENT",
     "seller": { "id": 205, "name": "OutdoorKing", "score": 4.6, "isVerified": true }
-  } 
+  }
 ]

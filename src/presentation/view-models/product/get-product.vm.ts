@@ -24,7 +24,7 @@ export class GetProductVM {
     this.condition = product.condition;
     this.isReturnable = product.isReturnable;
     this.creationDate = product.creationDate.toString();
-    this.warranty = product.warranty.duration + " " + product.warranty.unit;
+    this.warranty = product.warranty?.duration + " " + product.warranty?.unit;
     this.status = product.status;
     this.reviewScore = product.reviewScore;
     this.specificationGroups = (product.specificationGroups).map((g) => new SpecificationGroupVM(g));
