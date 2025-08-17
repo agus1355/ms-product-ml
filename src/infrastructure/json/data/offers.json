@@ -121,7 +121,7 @@
     "date": "2025-08-10T10:00:00.000Z",
     "status": "ENABLE",
     "availableStock": 15,
-    "offerType": "BEST_INSTALLMENTS",
+    "offerType": "BEST_PRICE",
     "seller": { "id": 201, "name": "SmartTech Store", "score": 4.9, "isVerified": true }
   },
   {

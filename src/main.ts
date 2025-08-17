@@ -17,8 +17,8 @@ async function bootstrap() {
   );
 
   const config = new DocumentBuilder()
-    .setTitle('E-commerce API')
-    .setDescription('The E-commerce API description')
+    .setTitle('Products API')
+    .setDescription('Backend API for getting products, offers, and reviews')
     .setVersion('1.0')
     .build();
   const document = SwaggerModule.createDocument(app, config);
