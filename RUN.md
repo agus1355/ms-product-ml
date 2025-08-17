@@ -22,3 +22,16 @@ npm run start:dev
 ```
 
 This will start the project in development mode using your local Node.js environment.
+
+## Run tests
+
+```bash
+# unit tests
+$ npm run test
+
+# e2e tests
+$ npm run test:e2e
+
+# test coverage
+$ npm run test:cov
+```
